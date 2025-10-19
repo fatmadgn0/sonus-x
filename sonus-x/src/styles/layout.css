@@ -1,0 +1,217 @@
+/* HEADER */
+
+.header {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  background: color-mix(in srgb, var(--bg-primary) 85%, transparent);
+  backdrop-filter: blur(5px);
+  transition: box-shadow 0.3s ease; 
+}
+
+.navbar a {
+  color: var(--text-color);
+  text-decoration: none;
+  margin-left: 30px;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: var(--accent-color);
+}
+
+.nav-cta {
+  border: 1px solid var(--accent-color);
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+
+.nav-cta:hover {
+  background-color: var(--accent-color);
+  color: var(--bg-primary);
+}
+
+/* HERO */
+
+.hero {
+  background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+  padding-top: 150px;
+  padding-bottom: 80px;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 250px;
+}
+
+.hero-content {
+  max-width: 50%;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 12px 30px;
+  border-radius: 5px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+}
+.hero-image {
+  position: relative;
+  /* Neon glow efekti (kütüphanesiz) */
+  box-shadow: 0 0 50px rgba(0, 123, 255, 0.4); 
+  border-radius: 50%;
+  animation: pulse 2s infinite alternate; /* Basit bir animasyon */
+}
+@keyframes pulse {
+  from {
+      box-shadow: 0 0 30px rgba(0, 123, 255, 0.4);
+  }
+  to {
+      box-shadow: 0 0 60px rgba(0, 123, 255, 0.8);
+  }
+}
+
+.speaker-render {
+  width: 350px;
+  height: 350px;
+  object-fit: contain;
+  display: block;
+}
+
+/* GALLERY */
+
+.gallery-section {
+  padding: 80px 0;
+  text-align: center;
+}
+.gallery-section h2 {
+  margin-bottom: 40px;
+  font-size: 2.2rem;
+}
+
+.gallery-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 20px;
+}
+
+.gallery-item {
+  min-width: 300px;
+  height: 200px;
+  object-fit: cover;
+  margin-right: 20px;
+  border-radius: 8px;
+  scroll-snap-align: start;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.gallery-item:hover {
+  opacity: 1;
+}
+
+/* TEMA BUTONU */
+
+.theme-toggle-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  border: 1px solid var(--accent-color);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 101;
+  font-size: 1.2rem;
+}
+
+
+/* RESPONSIVE (3 BREAKPOINT) */
+
+/* 1. Breakpoint: Mobil (<= 640px) */
+@media (max-width: 640px) {
+    .header {
+        padding: 15px 20px;
+        flex-direction:column;
+        gap: 10px;
+    }
+    .navbar {
+        display: block;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .navbar a {
+        margin: 4px;
+    }
+    .hero .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-content {
+        max-width: 100%;
+        margin-bottom: 40px;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 2. Breakpoint: Tablet (641px - 1024px) */
+@media (min-width: 641px) and (max-width: 1024px) {
+    .container {
+        padding: 0 30px;
+    }
+    .hero .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-content {
+        max-width: 80%;
+    }
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .pre-order-form input,
+    .pre-order-form button {
+        flex-grow: unset;
+        width: auto;
+    }
+}

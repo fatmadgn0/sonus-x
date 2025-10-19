@@ -1,0 +1,24 @@
+:root {
+    --accent-color: #007bff;
+    --transition-speed: 0.5s;
+  }
+  
+  body[data-theme="dark"] {
+    --bg-primary: #10121c;
+    --bg-secondary: #1c1f2e;
+    --text-color: #ffffff;
+    --text-secondary: #b0b0b0;
+    --card-bg: #242838;
+    --input-bg: #333;
+    --input-border: #444;
+  }
+  
+  body[data-theme="light"] {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f0f0f5;
+    --text-color: #333333;
+    --text-secondary: #555555;
+    --card-bg: #ffffff;
+    --input-bg: #ffffff;
+    --input-border: #cccccc;
+  }

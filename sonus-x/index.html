@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/styles/_variables.css">
+    <link rel="stylesheet" href="src/styles/base.css">
+    <link rel="stylesheet" href="src/styles/components/_card.css">
+    <link rel="stylesheet" href="src/styles/components/_form.css">
+    <link rel="stylesheet" href="src/styles/components/_accordion.css">
+    <link rel="stylesheet" href="src/styles/layout.css">
+    <title>SONUS X</title>
+  </head>
+  <body data-theme="dark">
+      <button id="theme-toggle" class="theme-toggle-btn" aria-label="Temayı Değiştir: Koyu/Açık">
+        💡
+    </button>
+
+    <header class="header">
+        <div class="logo">SONUS X</div>
+        <nav class="navbar" role="navigation" aria-label="Ana Sayfa Navigasyonu">
+            <a href="#features" tabindex="0">Özellikler</a>
+            <a href="#pricing" tabindex="0">Fiyat</a> 
+            <a href="#faq" tabindex="0">SSS</a> 
+            <a href="#gallery" tabindex="0">Galeri</a>
+            <a href="#pre-order" class="nav-cta" role="button" tabindex="0">Ön Sipariş</a> 
+        </nav>
+    </header>
+
+    <section class="hero" role="main">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Sesi Hisset</h1>
+                <p>Modern Tasarım. Akıllı Ses. <br>Kusursuz Entegrasyon.</p>
+                <a href="#pre-order" class="cta-button" role="button" tabindex="0">Daha Fazlası</a>
+            </div>
+            <div class="hero-image">
+                <img src="img/hoparlor.png" alt="Sonus X Hoparlörünün Ürün Tanıtım Görseli " class="speaker-render" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features-section">
+        <div class="container">
+            <h2>Ürün & Özellikleri</h2>
+            <div class="features-grid">
+                <div class="feature-card" role="region" aria-label="Bass Boost Özelliği" tabindex="0">
+                    <span class="feature-icon" aria-hidden="true">🔊</span> 
+                    <h3>Bass Boost Circuit</h3>
+                    <p>Derin ve zengin bas deneyimi için özel devre tasarımı.</p>
+                </div>
+                
+                <div class="feature-card" role="region" aria-label="Ambient Lights Özelliği" tabindex="0">
+                    <span class="feature-icon" aria-hidden="true">💡</span>
+                    <h3>Ambient Lights Interface</h3>
+                    <p>Müzikle senkronize olan dinamik ortam aydınlatması.</p>
+                </div>
+                
+                <div class="feature-card" role="region" aria-label="Voice Assistant Özelliği" tabindex="0">
+                    <span class="feature-icon" aria-hidden="true">🎙️</span>
+                    <h3>Voice Assistant Activation</h3>
+                    <p>Entegre yapay zeka ile hands-free kontrol imkanı.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="pricing" class="pricing-section features-section">
+        <div class="container">
+            <h2>Fiyatlandırma Planları</h2>
+            <div class="features-grid">
+                <div class="feature-card" role="region" aria-label="Standart Fiyat Planı" tabindex="0">
+                    <h3>Standart</h3>
+                    <p class="price-tag">$499</p>
+                    <ul>
+                        <li><span aria-hidden="true">✅</span> Temel Ses Özellikleri</li>
+                        <li><span aria-hidden="true">✅</span> Bluetooth Bağlantısı</li>
+                        <li><span aria-hidden="true">❌</span> Ambient Lights</li>
+                    </ul>
+                    <a href="#pre-order" class="cta-button">Şimdi Satın Al</a>
+                </div>
+                
+                <div class="feature-card highlighted-card" role="region" aria-label="Pro Fiyat Planı (Önerilen)" tabindex="0">
+                    <h3>Pro (Önerilen)</h3>
+                    <p class="price-tag">$799</p>
+                    <ul>
+                        <li><span aria-hidden="true">✅</span> Tüm Özellikler Dahil</li>
+                        <li><span aria-hidden="true">✅</span> Ambient Lights</li>
+                        <li><span aria-hidden="true">✅</span> Voice Assistant</li>
+                    </ul>
+                    <a href="#pre-order" class="cta-button">Şimdi Satın Al</a>
+                </div>
+                
+                <div class="feature-card" role="region" aria-label="Premium Fiyat Planı" tabindex="0">
+                    <h3>Premium</h3>
+                    <p class="price-tag">$999</p>
+                    <ul>
+                        <li><span aria-hidden="true">✅</span> Pro Özellikler +</li>
+                        <li><span aria-hidden="true">✅</span> Deri Kaplama</li>
+                        <li><span aria-hidden="true">✅</span> 5 Yıla Varan Garanti</li>
+                    </ul>
+                    <a href="#pre-order" class="cta-button">Şimdi Satın Al</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <h2>Sıkça Sorulan Sorular</h2>
+            <div class="accordion-container" role="tablist">
+                
+                <div class="accordion-item" tabindex="0">
+                    <button class="accordion-header" aria-expanded="false" aria-controls="content-1" role="tab">
+                        Sonus X hangi bağlantı tiplerini destekler? <span>+</span>
+                    </button>
+                    <div id="content-1" class="accordion-content" role="tabpanel" hidden>
+                        <p>Bluetooth 5.0, Wi-Fi (AirPlay 2, Spotify Connect) ve 3.5mm Aux girişini desteklemektedir.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item" tabindex="0">
+                    <button class="accordion-header" aria-expanded="false" aria-controls="content-2" role="tab">
+                        Temayı nasıl değiştirebilirim? <span>+</span>
+                    </button>
+                    <div id="content-2" class="accordion-content" role="tabpanel" hidden>
+                        <p>Sağ üst köşedeki 💡 (Ampul) düğmesine tıklayarak Koyu ve Açık tema arasında geçiş yapabilirsiniz. Tercihiniz tarayıcınızda otomatik olarak kaydedilecektir.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item" tabindex="0">
+                    <button class="accordion-header" aria-expanded="false" aria-controls="content-3" role="tab">
+                        Ön sipariş ne zaman teslim edilir? <span>+</span>
+                    </button>
+                    <div id="content-3" class="accordion-content" role="tabpanel" hidden>
+                        <p>Ön siparişlerin teslimatları, üretim sürecine bağlı olarak tahmini 4-6 hafta sürmektedir. Kayıt olduğunuz e-posta adresi üzerinden size güncellemeler gönderilecektir.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <h2>Gallery</h2>
+            <div class="gallery-carousel" role="region" aria-label="Ürün Görselleri Galerisi">
+                <img src="img/dorduncufoto.jpeg" alt="SONUS X Hoparlörünün yan görünümü" class="gallery-item" tabindex="0" loading="lazy">
+                <img src="img/ikincifoto.jpeg" alt="SONUS X Hoparlörünün ön görünümü" class="gallery-item" tabindex="0" loading="lazy">
+                <img src="img/ucuncufoto.jpeg" alt="SONUS X Hoparlörünün üstten görünümü" class="gallery-item" tabindex="0" loading="eager">
+                <img src="img/oturmaodası.jpeg" alt="SONUS X Hoparlörünün Oturma Odası Yerleşimi" class="gallery-item" tabindex="0" loading="lazy">
+                <img src="img/gencodası.jpeg" alt="SONUS X Hoparlörünün genc Odası Yerleşimi" class="gallery-item" tabindex="0" loading="lazy">
+
+
+            </div>
+        </div>
+    </section>
+
+    <section id="pre-order" class="pre-order-section">
+        <div class="container">
+            <h2>Ön Sipariş</h2>
+            <form class="pre-order-form" aria-live="polite" novalidate>
+                <label for="email-input" class="visually-hidden">E-posta adresiniz</label>
+                <input type="email" id="email-input" placeholder="Enter your email" required aria-required="true" tabindex="0">
+                <button type="submit" class="cta-button" role="submit" tabindex="0">Yerinizi Şimdi Ayırtın</button>
+                <div id="form-message" role="alert" aria-live="assertive" class="error-message"></div>
+            </form>
+            <p class="limit-info">Bu ürün gerçek değildir. Proje için tasarlanmıştır.</p>
+        </div>
+    </section>
+    
+
+    <script type="module" src="src/js/main.js"></script>
+
+
+   
+
+  </body>
+</html>

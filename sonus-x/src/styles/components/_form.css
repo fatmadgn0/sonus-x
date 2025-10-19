@@ -1,0 +1,50 @@
+
+/* FORM */
+
+.pre-order-section {
+  background-color: var(--bg-secondary);
+  padding: 60px 0;
+  text-align: center;
+  border-top: 1px solid color-mix(in srgb, var(--text-color) 10%, transparent);
+}
+
+.pre-order-form {
+  display: flex;
+  justify-content: center;
+  max-width: 600px;
+  margin: 0 auto 15px;
+  flex-wrap: wrap; 
+}
+
+.pre-order-form input {
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  border: 1px solid var(--input-border);
+  padding: 12px 20px;
+  border-radius: 5px 0 0 5px;
+  flex-grow: 1;
+}
+
+.pre-order-form button {
+  border-radius: 0 5px 5px 0;
+  padding: 12px 30px;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+  width: 100%; 
+}
+
+/* Mobil Uyum (Form için eklenmişti) */
+@media (max-width: 640px) {
+  .pre-order-form {
+      flex-direction: column;
+  }
+  .pre-order-form input,
+  .pre-order-form button {
+      border-radius: 5px;
+      margin-bottom: 10px;
+  }
+}
